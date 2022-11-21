@@ -479,6 +479,9 @@
 					color: #97cb00;
 					border-bottom: #97cb00 2px solid;
 				}
+                label{
+                    font-weight: 600;
+                }
 				</style>
 				<div class="row ms-2 mt-4">
 					<div class="row">
@@ -518,227 +521,195 @@
 							</div>
 						</div>
 						<div class="col-md-9 col-12">
+				
 							<div class="row ms-1">
 								<div class="card float-right">
-									<div class="row">
-										<div class="col-sm-5"> <img class="d-block mt-3 mb-3" src="https://resources.globalair.com/airport/images/complogo/3068.jpg" alt="" style=" display: block;
-                        margin-left: auto;
-                        margin-right: auto;">
-											<div class="card l-bg-green-dark">
-												<div class="card-statistic-3 p-4">
-													<div class="card-icon card-icon-large"></div>
-													<div class="mb-4">
-														<h5 class="card-title mb-0">FBO Level</h5>
-														<h2 class="d-flex align-items-center mb-0">
-                                        PLATINUM
-                                    </h2> </div>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-7">
-											<div class="card-block">
-												<table class="table table-borderless">
-													<tr>
-														<th>Telephone</th>
-														<td>818-988-8385</td>
-													</tr>
-													<tr>
-														<th>Email</th>
-														<td><a href="mailto:cpullman@castlecooke.com" class="text-decoration-none">cpullman@castlecooke.com</a></td>
-													</tr>
-													<tr>
-														<th>Airport</th>
-														<td><a href="/airport/apt.airport.aspx?aptcode=VNY" class="text-decoration-none" target="_blank" rel="noreferrer">VNY</a></td>
-													</tr>
-													<tr>
-														<th>Address</th>
-														<td>7415 Hayvenhurst Place Van Nuys, CA 91406</td>
-													</tr>
-													<tr>
-														<th>Approved</th>
-														<td>Yes</td>
-													</tr>
-												</table>
-											</div>
-											<div class="row">
-												<div class="col-12">
-													<p class="alert alert-primary">You may register another FBO by filling out the form located <a href="/airport/fbo_registration.aspx">here</a>.</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="row">
-								<div class="col-12">
-									<div class="card p-4" style="background:linear-gradient(135deg, #65799b 0%,#5e2563 100%); color: white;">
-									<div class="row">
-										<div class="col-sm-7"> 
-											<h4 class="card-subtitle mb-2"><b>Your fuel prices were last updated: </b>
-												11/8/2022 8:13:11 PM</h4>
-										</div>
-										<div class="col-sm-5">
-											<div class="card-block">
-												<a href="#" class="btn btn-lg btn-success btn-success-custom">Review your fuel prices here</a> 
-											</div>
-										</div>
-									</div>
-									</div>
-								</div>
-							</div>
-							<div class="row ms-1 ">
-                                <div class="col-3">
-                                    <h3>Your Statistics:</h3>
-                                </div>
-                                <div class="col-9 text-end">
-                                    <b>Start Date:</b><input name="ctl00$Content$tbStartDate" type="date" id="Content_tbStartDate" value="2022-05-14">
-                                    <b>End Date:</b><input name="ctl00$Content$tbStartDate" type="date" id="Content_tbStartDate" value="2022-11-14">
-                                    <a href="#" class="btn btn-success btn-success-custom">Search Stats</a>
-                                </div>
-                            </div>
-							<div class="row ms-1 mt-2">
+									<div class="row mt-4">
+                                        <form>
+                                            <div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
+                                                <span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
+                                                    Basic Info
+                                                </span>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="mb-3 col-6">
+                                                    <label for="exampleInputEmail1" class="form-label">Manager</label>
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                </div>
+                                                <div class="mb-3 col-6">
+                                                    <label for="exampleInputtext1" class="form-label">Address</label>
+                                                    <input type="text" class="form-control" id="exampleInputtext1">
+                                                </div>
+                                                <div class="mb-3 col-6">
+                                                    <label for="exampleInputEmail1" class="form-label">Address 2</label>
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                </div>
+                                                <div class="mb-3 col-6">
+                                                    <label for="exampleInputtext1" class="form-label">City</label>
+                                                    <input type="text" class="form-control" id="exampleInputtext1">
+                                                </div>
+                                                <div class="mb-3 col-6">
+                                                    <label for="exampleInputEmail1" class="form-label">State</label>
+                                                    <select class="form-select" aria-label="Default select example" id="exampleInputEmail1">
+                                                        <option selected>Select a Location</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                      </select>
+                                                </div>
+                                                <div class="mb-3 col-6">
+                                                    <label for="exampleInputtext1" class="form-label">Zip</label>
+                                                    <input type="text" class="form-control" id="exampleInputtext1">
+                                                </div>
+                                                <div class="mb-3 col-6">
+                                                    <label for="exampleInputEmail1" class="form-label">Telephone</label>
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                </div>
+                                                <div class="mb-3 col-6">
+                                                    <label for="exampleInputtext1" class="form-label">Fax</label>
+                                                    <input type="text" class="form-control" id="exampleInputtext1">
+                                                </div>
+                                                <div class="mb-3 col-6">
+                                                    <label for="exampleInputEmail1" class="form-label">Arinc</label>
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                </div>
+                                                <div class="mb-3 col-6">
+                                                    <label for="exampleInputtext1" class="form-label">Unicom</label>
+                                                    <input type="text" class="form-control" id="exampleInputtext1">
+                                                </div>
+                                                <div class="mb-3 col-6">
+                                                    <label for="exampleInputEmail1" class="form-label">FAA Repair Code</label>
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                </div>
+                                                <div class="mb-3 col-6">
+                                                    <label for="exampleInputtext1" class="form-label">Email</label>
+                                                    <input type="text" class="form-control" id="exampleInputtext1">
+                                                </div>
+                                                <div class="mb-3 col-6">
+                                                    <label for="exampleInputEmail1" class="form-label">URL</label>
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                </div>
+                                                <div class="mb-3 col-6">
+                                                    <label for="exampleInputtext1" class="form-label">Airport</label>
+                                                    <a href="#" class="text-decoration-none"><input type="text" class="form-control" readonly id="exampleInputtext1" value="VNY" style="cursor: pointer"></a>
+                                                </div>
+                                                <div class="mb-3 col-6">
+                                                    <label for="exampleInputEmail1" class="form-label">Operating Hours</label>
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                </div>
+                                                <div class="mb-3 col-6">
+                                                    <label for="exampleInputtext1" class="form-label">Ramp Fee</label>
+                                                    <input type="text" class="form-control" id="exampleInputtext1">
+                                                </div>
+                                                <div class="mb-3 col-6">
+                                                    <label for="exampleInputEmail1" class="form-label">Explain Ramp Fee</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 
-								<div class="col-xl-4 col-lg-4">
-									<div class="card l-bg-cherry">
-										<div class="card-statistic-3 p-4">
-											<div class="card-icon card-icon-large"><img src="click.png" /></div>
-											<div class="mb-4">
-												<h5 class="card-title mb-0">Airport Page <br>Views</h5> </div>
-											<div class="row align-items-center mb-2 d-flex">
-												<div class="col-8">
-													<h2 class="d-flex align-items-center mb-0">
-                                            2275
-                                        </h2> </div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-4 col-lg-4">
-									<div class="card l-bg-blue-dark">
-										<div class="card-statistic-3 p-4">
-											<div class="card-icon card-icon-large"><img src="click.png" /></div>
-											<div class="mb-4">
-												<h5 class="card-title mb-0">FBO Page <br>Views</h5> </div>
-											<div class="row align-items-center mb-2 d-flex">
-												<div class="col-8">
-													<h2 class="d-flex align-items-center mb-0">
-                                            476
-                                        </h2> </div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-4 col-lg-4">
-									<div class="card l-bg-green-dark">
-										<div class="card-statistic-3 p-4">
-											<div class="card-icon card-icon-large"><img src="click.png" /></div>
-											<div class="mb-4">
-												<h5 class="card-title mb-0">Contact Now <br>Clickthroughs</h5> </div>
-											<div class="row align-items-center mb-2 d-flex">
-												<div class="col-8">
-													<h2 class="d-flex align-items-center mb-0">
-                                            25
-                                        </h2> </div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row ms-1">
-								<div class="card float-right">
-									<div class="row">
-										<div class="col-sm-5 p-3">
-											<div class="container mb-3 text-center"> <a type="button" class="w-100 btn btn-success btn-success-custom rounded" href="#">Aircraft Registration Lookup</a> </div>
-											<div class="container mb-3 text-center"> <a type="button" class="w-100 btn btn-success btn-success-custom rounded" href="#">Sell Your Aircraft</a> </div>
-											<div class="container text-center"> <a type="button" class="w-100 btn btn-success btn-success-custom rounded" href="#">Create a Press Release</a> </div>
-										</div>
-										<div class="col-sm-7 p-3">
-											<div class="row">
-												<h4>
-                                        <a href="#" class="text-decoration-none">Central Region
-                                        Average Fuel Prices:
-                                        </a>
-                                    </h4>
-												<div class="col-6">
-													<div class="card l-bg-orange-dark">
-														<div class="card-statistic-3 p-4">
-															<div class="card-icon card-icon-large"><img src="dollar.png" /></div>
-															<div class="mb-4">
-																<h5 class="card-title mb-0">JetA</h5> </div>
-															<div class="row align-items-center mb-2 d-flex">
-																<div class="col-8">
-																	<h2 class="d-flex align-items-center mb-0">
-                                                                $6.64
-                                                            </h2> </div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-6">
-													<div class="card l-bg-orange-dark">
-														<div class="card-statistic-3 p-4">
-															<div class="card-icon card-icon-large"><img src="dollar.png" /></div>
-															<div class="mb-4">
-																<h5 class="card-title mb-0">100LL</h5> </div>
-															<div class="row align-items-center mb-2 d-flex">
-																<div class="col-8">
-																	<h2 class="d-flex align-items-center mb-0">
-                                                                $6.56
-                                                            </h2> </div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
-										<a href="#" class="text-decoration-none"><span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
-											Ratings & Reviews
-										</span></a>
-									</div>
-									<div class="row">
-										<div class="col-sm-12 p-3">
-											<div class="row">
-												<div class="col-6">
-													<a href="#" class="text-decoration-none">
-													<div class="card l-bg-blue-dark">
-														<div class="card-statistic-3 p-4">
-															<div class="card-icon card-icon-large"><img src="star.png" /></div>
-															<div class="mb-4">
-																<h5 class="card-title mb-0">Ratings</h5> </div>
-															<div class="row align-items-center mb-2 d-flex">
-																<div class="col-8">
-																	<h2 class="d-flex align-items-center mb-0">
-                                                                4.8/5
-                                                            </h2> </div>
-															</div>
-														</div>
-													</div>
-												</a>
-												</div>
-												<div class="col-6">
-													<a href="#" class="text-decoration-none">
-
-													<div class="card l-bg-blue-dark">
-														<div class="card-statistic-3 p-4">
-															<div class="card-icon card-icon-large"><img src="star.png" /></div>
-															<div class="mb-4">
-																<h5 class="card-title mb-0">Reviews</h5> </div>
-															<div class="row align-items-center mb-2 d-flex">
-																<div class="col-8">
-																	<h2 class="d-flex align-items-center mb-0">
-                                                                0
-                                                            </h2> </div>
-															</div>
-														</div>
-													</div>
-												</a>
-
-												</div>
-											</div>
-										</div>
+                                                </div>
+                                                <div class="mb-3 col-6">
+                                                    <label for="exampleInputtext1" class="form-label">FBO Description</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                </div>
+                                                
+                                            </div>
+                                            <div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
+                                                <span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
+                                                    Credit Cards Accepted
+                                                </span>
+                                            </div>
+                                            <div class="row mt-5 mb-5">
+                                                <div class="col-6 col-md-3">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexSwitchCheckChecked">Mastercard</label>
+                                                  </div>
+                                                </div>
+                                                <div class="col-6 col-md-3">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexSwitchCheckChecked">Visa</label>
+                                                  </div>
+                                                </div>
+                                                <div class="col-6 col-md-3">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexSwitchCheckChecked">American Express</label>
+                                                  </div>
+                                                </div>
+                                                <div class="col-6 col-md-3">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexSwitchCheckChecked">Discover</label>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
+                                                <span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
+                                                    FBO Photos
+                                                </span>
+                                            </div>
+                                            <div class="row p-3">
+                                                <span class="alert alert-info" style="font-size: 20px">
+                                                    <a href="#">Click here</a> to view and manage your FBO Photos
+                                                </span>
+                                            </div>
+                                            <div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
+                                                <span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
+                                                    FBO Logo
+                                                </span>
+                                            </div>
+                                            <div class="row p-3 mb-3">
+                                                <div class="col-12 col-md-4 text-center mb-2">
+                                                    <img src="https://resources.globalair.com/airport/images/complogo/30681.jpg">
+                                                    <br><br>
+                                                    <a href="#" class="btn btn-danger rounded">Delete Logo</a>
+                                                </div>
+                                                <div class="col-12 col-md-8">
+                                                        <p>
+                                                            To change your FBO's logo, click the Browse button,
+                                                            select a new file (in .jpg or .jpeg format), then click the Upload
+                                                            button. 
+                                                        </p>
+                                                        <p>
+                                                            The maximum width for your logo is 175 pixels. If you upload
+                                                            an image larger than 175 pixels wide, it will be re-sized automatically.
+                                                        </p>
+                                                    <div class="input-group mb-3">
+                                                        <label class="input-group-text" for="inputGroupFile01">Upload</label>
+                                                        <input type="file" class="form-control" id="inputGroupFile01">
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
+                                                <span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
+                                                    FBO Manager's Photo
+                                                </span>
+                                            </div>
+                                            <div class="row p-3">
+                                                <div class="col-12 col-md-4 text-center mb-2">
+                                                    <img src="https://www.globalair.com/fbo/noimage.gif">
+                                                    <br><br>
+                                                </div>
+                                                <div class="col-12 col-md-8">
+                                                        <p>
+                                                            To add your FBO's manager's photo, click the Browse button,
+                                                            select the file (in .jpg or .jpeg format), then click the Upload
+                                                            button.
+                                                        </p>
+                                                        <p>
+                                                            The maximum width for your FBO manager's photo is 100 pixels. If you upload
+                                                            an image larger than 100 pixels wide, it will be re-sized automatically.
+                                                        </p>
+                                                    <div class="input-group mb-3">
+                                                        <label class="input-group-text" for="inputGroupFile01">Upload</label>
+                                                        <input type="file" class="form-control" id="inputGroupFile01">
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 col-12 text-center">
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </form>	
 									</div>
 								</div>
 							</div>
@@ -853,8 +824,8 @@
 									<label class="form-label" for="email">Username</label>
 									<input type="text" class="form-control ele150 valid" name="tbUsername" id="tbUsername" placeholder="Username" maxlength="50" aria-invalid="false"> </div>
 								<div class="mb-3"> <a href="https://www.globalair.com/forgot.aspx" class="float-end text-info text-decoration-none">Reset</a>
-									<label class="form-label" for="pass">Password</label>
-									<input type="password" name="tbPassword" id="tbPassword" placeholder="Password" class="form-control ele150 valid" maxlength="50" aria-invalid="false">
+									<label class="form-label" for="pass">text</label>
+									<input type="text" name="tbtext" id="tbtext" placeholder="text" class="form-control ele150 valid" maxlength="50" aria-invalid="false">
 									<input type="hidden" id="hiddenURL" value="/Articles"> </div>
 								<div class="clearfix">
 									<button type="submit" class="btn btn-primary btn-primary-custom float-right" name="IB_MyFlightDepartmentSubmit" id="IB_MyFlightDepartmentSubmit">Sign In</button>
