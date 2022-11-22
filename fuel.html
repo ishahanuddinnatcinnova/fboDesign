@@ -44,6 +44,8 @@
 	<script async="" defer="" type="application/ld+json"> { "@context": "http://schema.org", "@graph": [ { "@type": "WPHeader", "potentialAction": [ { "@type": "Action", "name": "POST YOUR ARTICLE", "target": "https://www.globalair.com/Articles/Edit" }, { "@type": "Action", "name": "Register", "target": "https://www.globalair.com/register" } ] }, { "@type": "WPFooter", "copyrightYear": "2022", "description": "GlobalAir.com. All rights reserved.", "copyrightHolder": { "@type": "Organization", "name": "GlobalAir.com" } }, { "@type": "SiteNavigationElement", "name": "Home", "url": "https://www.globalair.com", "description": "Home", "position": 1 }, { "@type": "SiteNavigationElement", "name": "Aircraft For Sale", "url": "https://www.globalair.com/aircraft-for-sale", "description": "Aircraft For Sale", "position": 2 }, { "@type": "SiteNavigationElement", "name": "Aviation Directory", "url": "https://www.globalair.com/directories/", "description": "Aviation Directory", "position": 3 }, { "@type": "SiteNavigationElement", "name": "Airport Search", "url": "https://www.globalair.com/airport/default.aspx", "description": "Airport Search", "position": 4 }, { "@type": "SiteNavigationElement", "name": "Aviation News", "url": "https://www.globalair.com/Articles", "description": "General and Corporate Aviation Headline News, Press and Insights", "position": 6 }, { "@type": "SiteNavigationElement", "name": "Amphibian", "url": "https://www.globalair.com/aircraft-for-sale/Amphibian", "description": "Amphibian For Sale", "position": 6 }, { "@type": "SiteNavigationElement", "name": "Commercial", "url": "https://www.globalair.com/aircraft-for-sale/Commercial", "description": "Commercial For Sale", "position": 7 }, { "@type": "SiteNavigationElement", "name": "Experimental/Kits", "url": "https://www.globalair.com/aircraft-for-sale/Experimental-Kit", "description": "Experimental/Kits For Sale", "position": 8 }, { "@type": "SiteNavigationElement", "name": "Helicopter", "url": "https://www.globalair.com/aircraft-for-sale/Helicopters", "description": "Helicopter For Sale", "position": 9 }, { "@type": "SiteNavigationElement", "name": "Jets", "url": "https://www.globalair.com/aircraft-for-sale/Private-Jet", "description": "Jets For Sale", "position": 10 }, { "@type": "SiteNavigationElement", "name": "Single Engine Turbine", "url": "https://www.globalair.com/aircraft-for-sale/Single-Engine-Turbine", "description": "Single Engine Turbine For Sale", "position": 11 }, { "@type": "SiteNavigationElement", "name": "Singles", "url": "https://www.globalair.com/aircraft-for-sale/Single-Engine-Piston", "description": "Singles For Sale", "position": 12 }, { "@type": "SiteNavigationElement", "name": "Twin Pistons", "url": "https://www.globalair.com/aircraft-for-sale/Twin-Engine-Piston", "description": "Twin Pistons For Sale", "position": 13 }, { "@type": "SiteNavigationElement", "name": "Twin Turbines", "url": "https://www.globalair.com/aircraft-for-sale/Twin-Engine-Turbine", "description": "Twin Turbines For Sale", "position": 14 }, { "@type": "SiteNavigationElement", "name": "Vintage", "url": "https://www.globalair.com/aircraft-for-sale/Vintage", "description": "Vintage For Sale", "position": 15 }, { "@type": "SiteNavigationElement", "name": "Warbirds", "url": "https://www.globalair.com/aircraft-for-sale/Warbird", "description": "Warbirds For Sale", "position": 16 }, { "@type": "SiteNavigationElement", "name": "Light Sport", "url": "https://www.globalair.com/aircraft-for-sale/Light-Sport", "description": "Light Sport For Sale", "position": 17 } ] } </script>
 	<link href="./Airport Weather &amp; FBO Fuel Prices _ GlobalAir.com_files/bootstrap.custom.css" rel="stylesheet" media="all">
 	<link href="./Airport Weather &amp; FBO Fuel Prices _ GlobalAir.com_files/style.css" rel="stylesheet" media="all">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+
 	<style>
 	.footer a {
 		text-decoration: none
@@ -479,6 +481,77 @@
 					color: #97cb00;
 					border-bottom: #97cb00 2px solid;
 				}
+                label{
+                    font-weight: 600;
+                }
+        .wrapper2 {
+            width: 100%;
+            display: grid;
+            place-items: center;
+            gap: 15px;
+        }
+
+        .container2 {
+            height: 150px;
+            width: 30%;
+            background-color: #ffffff;
+            box-shadow: 0 0 25px rgba(17, 1, 68, 0.08);
+            border-radius: 8px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .inputCheckbox input {
+            -webkit-appearance: none;
+            position: relative;
+            width: 100%;
+            cursor: pointer;
+            border: none
+        }
+
+            .inputCheckbox input:after {
+                position: absolute;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 400;
+                content: "\f111";
+                font-size: 18px;
+                color: #478bfb;
+                right: 10px;
+                top: -5px;
+            }
+
+            .inputCheckbox input:checked:after {
+                font-weight: 900;
+                content: "\f058";
+                color: #478bfb;
+            }
+
+        .container2 img {
+            width: 50%;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            cursor: pointer;
+        }
+
+        @media screen and (min-width: 950px) {
+            .wrapper2 {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+
+            .container2 {
+                height: 160px;
+                width: 90%;
+            }
+
+            input[type="checkbox"]:after {
+                font-size: 22px;
+            }
+        }
 				</style>
 				<div class="row ms-2 mt-4">
 					<div class="row">
@@ -518,227 +591,134 @@
 							</div>
 						</div>
 						<div class="col-md-9 col-12">
+				
 							<div class="row ms-1">
 								<div class="card float-right">
-									<div class="row">
-										<div class="col-sm-5"> <img class="d-block mt-3 mb-3" src="https://resources.globalair.com/airport/images/complogo/3068.jpg" alt="" style=" display: block;
-                        margin-left: auto;
-                        margin-right: auto;">
-											<div class="card l-bg-green-dark">
-												<div class="card-statistic-3 p-4">
-													<div class="card-icon card-icon-large"></div>
-													<div class="mb-4">
-														<h5 class="card-title mb-0">FBO Level</h5>
-														<h2 class="d-flex align-items-center mb-0">
-                                        PLATINUM
-                                    </h2> </div>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-7">
-											<div class="card-block">
-												<table class="table table-borderless">
-													<tr>
-														<th>Telephone</th>
-														<td>818-988-8385</td>
-													</tr>
-													<tr>
-														<th>Email</th>
-														<td><a href="mailto:cpullman@castlecooke.com" class="text-decoration-none">cpullman@castlecooke.com</a></td>
-													</tr>
-													<tr>
-														<th>Airport</th>
-														<td><a href="/airport/apt.airport.aspx?aptcode=VNY" class="text-decoration-none" target="_blank" rel="noreferrer">VNY</a></td>
-													</tr>
-													<tr>
-														<th>Address</th>
-														<td>7415 Hayvenhurst Place Van Nuys, CA 91406</td>
-													</tr>
-													<tr>
-														<th>Approved</th>
-														<td>Yes</td>
-													</tr>
-												</table>
-											</div>
-											<div class="row">
-												<div class="col-12">
-													<p class="alert alert-primary">You may register another FBO by filling out the form located <a href="/airport/fbo_registration.aspx">here</a>.</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="row">
-								<div class="col-12">
-									<div class="card p-4" style="background:linear-gradient(135deg, #65799b 0%,#5e2563 100%); color: white;">
-									<div class="row">
-										<div class="col-sm-7"> 
-											<h4 class="card-subtitle mb-2"><b>Your fuel prices were last updated: </b>
-												11/8/2022 8:13:11 PM</h4>
-										</div>
-										<div class="col-sm-5">
-											<div class="card-block">
-												<a href="#" class="btn btn-lg btn-success btn-success-custom">Review your fuel prices here</a> 
-											</div>
-										</div>
-									</div>
-									</div>
-								</div>
-							</div>
-							<div class="row ms-1 ">
-                                <div class="col-3">
-                                    <h3>Your Statistics:</h3>
-                                </div>
-                                <div class="col-9 text-end">
-                                    <b>Start Date:</b><input name="ctl00$Content$tbStartDate" type="date" id="Content_tbStartDate" value="2022-05-14">
-                                    <b>End Date:</b><input name="ctl00$Content$tbStartDate" type="date" id="Content_tbStartDate" value="2022-11-14">
-                                    <a href="#" class="btn btn-success btn-success-custom">Search Stats</a>
-                                </div>
-                            </div>
-							<div class="row ms-1 mt-2">
-
-								<div class="col-xl-4 col-lg-4">
-									<div class="card l-bg-cherry">
-										<div class="card-statistic-3 p-4">
-											<div class="card-icon card-icon-large"><img src="click.png" /></div>
-											<div class="mb-4">
-												<h5 class="card-title mb-0">Airport Page <br>Views</h5> </div>
-											<div class="row align-items-center mb-2 d-flex">
-												<div class="col-8">
-													<h2 class="d-flex align-items-center mb-0">
-                                            2275
-                                        </h2> </div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-4 col-lg-4">
-									<div class="card l-bg-blue-dark">
-										<div class="card-statistic-3 p-4">
-											<div class="card-icon card-icon-large"><img src="click.png" /></div>
-											<div class="mb-4">
-												<h5 class="card-title mb-0">FBO Page <br>Views</h5> </div>
-											<div class="row align-items-center mb-2 d-flex">
-												<div class="col-8">
-													<h2 class="d-flex align-items-center mb-0">
-                                            476
-                                        </h2> </div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-4 col-lg-4">
-									<div class="card l-bg-green-dark">
-										<div class="card-statistic-3 p-4">
-											<div class="card-icon card-icon-large"><img src="click.png" /></div>
-											<div class="mb-4">
-												<h5 class="card-title mb-0">Contact Now <br>Clickthroughs</h5> </div>
-											<div class="row align-items-center mb-2 d-flex">
-												<div class="col-8">
-													<h2 class="d-flex align-items-center mb-0">
-                                            25
-                                        </h2> </div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row ms-1">
-								<div class="card float-right">
-									<div class="row">
-										<div class="col-sm-5 p-3">
-											<div class="container mb-3 text-center"> <a type="button" class="w-100 btn btn-success btn-success-custom rounded" href="#">Aircraft Registration Lookup</a> </div>
-											<div class="container mb-3 text-center"> <a type="button" class="w-100 btn btn-success btn-success-custom rounded" href="#">Sell Your Aircraft</a> </div>
-											<div class="container text-center"> <a type="button" class="w-100 btn btn-success btn-success-custom rounded" href="#">Create a Press Release</a> </div>
-										</div>
-										<div class="col-sm-7 p-3">
-											<div class="row">
-												<h4>
-                                        <a href="#" class="text-decoration-none">Central Region
-                                        Average Fuel Prices:
-                                        </a>
-                                    </h4>
-												<div class="col-6">
-													<div class="card l-bg-orange-dark">
-														<div class="card-statistic-3 p-4">
-															<div class="card-icon card-icon-large"><img src="dollar.png" /></div>
-															<div class="mb-4">
-																<h5 class="card-title mb-0">JetA</h5> </div>
-															<div class="row align-items-center mb-2 d-flex">
-																<div class="col-8">
-																	<h2 class="d-flex align-items-center mb-0">
-                                                                $6.64
-                                                            </h2> </div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-6">
-													<div class="card l-bg-orange-dark">
-														<div class="card-statistic-3 p-4">
-															<div class="card-icon card-icon-large"><img src="dollar.png" /></div>
-															<div class="mb-4">
-																<h5 class="card-title mb-0">100LL</h5> </div>
-															<div class="row align-items-center mb-2 d-flex">
-																<div class="col-8">
-																	<h2 class="d-flex align-items-center mb-0">
-                                                                $6.56
-                                                            </h2> </div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
-										<a href="#" class="text-decoration-none"><span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
-											Ratings & Reviews
-										</span></a>
-									</div>
-									<div class="row">
-										<div class="col-sm-12 p-3">
-											<div class="row">
-												<div class="col-6">
-													<a href="#" class="text-decoration-none">
-													<div class="card l-bg-blue-dark">
-														<div class="card-statistic-3 p-4">
-															<div class="card-icon card-icon-large"><img src="star.png" /></div>
-															<div class="mb-4">
-																<h5 class="card-title mb-0">Ratings</h5> </div>
-															<div class="row align-items-center mb-2 d-flex">
-																<div class="col-8">
-																	<h2 class="d-flex align-items-center mb-0">
-                                                                4.8/5
-                                                            </h2> </div>
-															</div>
-														</div>
-													</div>
-												</a>
-												</div>
-												<div class="col-6">
-													<a href="#" class="text-decoration-none">
-
-													<div class="card l-bg-blue-dark">
-														<div class="card-statistic-3 p-4">
-															<div class="card-icon card-icon-large"><img src="star.png" /></div>
-															<div class="mb-4">
-																<h5 class="card-title mb-0">Reviews</h5> </div>
-															<div class="row align-items-center mb-2 d-flex">
-																<div class="col-8">
-																	<h2 class="d-flex align-items-center mb-0">
-                                                                0
-                                                            </h2> </div>
-															</div>
-														</div>
-													</div>
-												</a>
-
-												</div>
-											</div>
-										</div>
+									<div class="row mt-4">
+                                        <form>
+                                            <div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
+                                                <span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
+                                                    Update your fuel prices
+                                                </span>
+                                            </div>
+                                            <div class="row mt-5 pb-2">
+                                                <div class="col"></div>
+                                                <div class="col"><b>Full-Serve</b></div>
+                                                <div class="col"><b>Self-Serve</b></div>
+                                            </div>
+                                            <div class="row pb-2">
+                                                <div class="col text-right"><b>JETA:</b></div>
+                                                <div class="col currency">
+                                                    <input name="ctl00$Content$tbJETTA" type="text" maxlength="6" id="Content_tbJETTA" class="form-control" value="7.52" />
+                                                </div>
+                                                <div class="col currency">
+                                                    <input name="ctl00$Content$tbSSJETTA" type="text" value="0" id="Content_tbSSJETTA" class="form-control" value="0.00" />
+                                                </div>
+                                            </div>
+                                            <div class="row pb-2">
+                                                <div class="col text-right"><b>JETA w/Additive:</b></div>
+                                                <div class="col currency">
+                                                    <input name="ctl00$Content$tbJETAPRIST" type="text" maxlength="6" id="Content_tbJETAPRIST" class="form-control" value="7.59" />
+                                                </div>
+                                                <div class="col currency">
+                                                    <input name="ctl00$Content$tbSSJETAPRIST" type="text" value="0" id="Content_tbSSJETAPRIST" class="form-control" value="0.00" />
+                                                </div>
+                                            </div>
+                                            <div class="row pb-2">
+                                                <div class="col text-right"><b>UL94:</b></div>
+                                                <div class="col currency">
+                                                    <input name="ctl00$Content$tbUL94" type="text" value="0" maxlength="6" id="Content_tbUL94" class="form-control" value="0.00" />
+                                                </div>
+                                                <div class="col currency">
+                                                    <input name="ctl00$Content$tbSSUL94" type="text" value="0" id="Content_tbSSUL94" class="form-control" value="0.00" />
+                                                </div>
+                                            </div>
+                                            <div class="row pb-2">
+                                                <div class="col text-right"><b>MOGAS:</b></div>
+                                                <div class="col currency">
+                                                    <input name="ctl00$Content$tbMOGAS" type="text" value="0" maxlength="6" id="Content_tbMOGAS" class="form-control" value="0.00" />
+                                                </div>
+                                                <div class="col currency">
+                                                    <input name="ctl00$Content$tbSSMOGAS" type="text" value="0" id="Content_tbSSMOGAS" class="form-control" value="0.00" />
+                                                </div>
+                                            </div>
+                                            <div class="row pb-2">
+                                                <div class="col text-right"><b>100LL:</b></div>
+                                                <div class="col currency">
+                                                    <input name="ctl00$Content$tb100LL" type="text" maxlength="6" id="Content_tb100LL" class="form-control" value="8.30" />
+                                                </div>
+                                                <div class="col currency">
+                                                    <input name="ctl00$Content$tbSS100LL" type="text" value="0" id="Content_tbSS100LL" class="form-control" value="0.00" />
+                                                </div>
+                                            </div>
+                                            <div class="row pb-2">
+                                                <div class="col text-right"><b>SAF:</b></div>
+                                                <div class="col currency">
+                                                    <input name="ctl00$Content$tbSAF" type="text" value="0" maxlength="6" id="Content_tbSAF" class="form-control" value="0.00" />
+                                                </div>
+                                                <div class="col currency">
+                                                    <input name="ctl00$Content$tbSSSAF" type="text" value="0" id="Content_tbSSSAF" class="form-control" value="0.00" />
+                                                </div>
+                                            </div>
+                                            <div class="row pb-2">
+                                                <div class="col text-right"><b>SAF w/Additive:</b></div>
+                                                <div class="col currency">
+                                                    <input name="ctl00$Content$tbSAFPRIST" type="text" value="0" maxlength="6" id="Content_tbSAFPRIST" class="form-control" value="0.00" />
+                                                </div>
+                                                <div class="col currency">
+                                                    <input name="ctl00$Content$tbSSSAFPRIST" type="text" value="0" id="Content_tbSSSAFPRIST" class="form-control" value="0.00" />
+                                                </div>
+                                            </div>
+                                            <div class="container card p-4 mt-4">
+                                                <div class="row wrapper2"> 
+                                                        <div class="container2">
+                                                            <span class="inputCheckbox"><input id="chkLogoService01" type="radio" name="ctl00$Content$chkLogoService01" /></span>
+                                                            <label for="chkLogoService01">
+                                                                <img src="https://www.globalair.com/airport/images/ascent.gif" title="Ascent" />
+                                                            </label>
+                                                        </div>
+                                                        <div class="container2">
+                                                            <span class="inputCheckbox"><input id="chkLogoService02" type="radio" name="ctl00$Content$chkLogoService01" /></span>
+                                                            <label for="chkLogoService02">
+                                                                <img src="https://www.globalair.com/airport/images/epic.gif" title="Epic" />
+                                                            </label>
+                                                        </div>
+                                                        <div class="container2">
+                                                            <span class="inputCheckbox"><input id="chkLogoService03" type="radio" name="ctl00$Content$chkLogoService01" /></span>
+                                                            <label for="chkLogoService03">
+                                                                <img src="https://www.globalair.com/airport/images/phillips66.gif" title="Phillips66" />
+                                                            </label>
+                                                        </div>
+                                                        <div class="container2">
+                                                            <span class="inputCheckbox"><input id="chkLogoService04" type="radio" name="ctl00$Content$chkLogoService01" checked="checked" /></span>
+                                                            <label for="chkLogoService04">
+                                                                <img src="https://www.globalair.com/airport/images/avfuel.gif" title="Avfuel" />
+                                                            </label>
+                                                        </div>
+                                                        <div class="container2">
+                                                            <span class="inputCheckbox"><input id="chkLogoService05" type="radio" name="ctl00$Content$chkLogoService01" /></span>
+                                                            <label for="chkLogoService05">
+                                                                <img src="https://www.globalair.com/airport/images/titan.gif" title="Titan" />
+                                                            </label>
+                                                        </div>
+                                                        <div class="container2">
+                                                            <span class="inputCheckbox"><input id="chkLogoService06" type="radio" name="ctl00$Content$chkLogoService01" /></span>
+                                                            <label for="chkLogoService06">
+                                                                <img src="https://www.globalair.com/airport/images/independent2.gif" title="Independent2" />
+                                                            </label>
+                                                        </div>
+                                                        <div class="container2">
+                                                            <span class="inputCheckbox"><input id="chkLogoService07" type="radio" name="ctl00$Content$chkLogoService01" /></span>
+                                                            <label for="chkLogoService07">
+                                                                <img src="https://www.globalair.com/airport/images/AEGFuels.gif" title="AEGFuels" />
+                                                            </label>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 col-12 text-center">
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </form>	
 									</div>
 								</div>
 							</div>
@@ -853,8 +833,8 @@
 									<label class="form-label" for="email">Username</label>
 									<input type="text" class="form-control ele150 valid" name="tbUsername" id="tbUsername" placeholder="Username" maxlength="50" aria-invalid="false"> </div>
 								<div class="mb-3"> <a href="https://www.globalair.com/forgot.aspx" class="float-end text-info text-decoration-none">Reset</a>
-									<label class="form-label" for="pass">Password</label>
-									<input type="password" name="tbPassword" id="tbPassword" placeholder="Password" class="form-control ele150 valid" maxlength="50" aria-invalid="false">
+									<label class="form-label" for="pass">text</label>
+									<input type="text" name="tbtext" id="tbtext" placeholder="text" class="form-control ele150 valid" maxlength="50" aria-invalid="false">
 									<input type="hidden" id="hiddenURL" value="/Articles"> </div>
 								<div class="clearfix">
 									<button type="submit" class="btn btn-primary btn-primary-custom float-right" name="IB_MyFlightDepartmentSubmit" id="IB_MyFlightDepartmentSubmit">Sign In</button>
