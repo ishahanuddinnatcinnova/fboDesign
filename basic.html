@@ -44,6 +44,8 @@
 	<script async="" defer="" type="application/ld+json"> { "@context": "http://schema.org", "@graph": [ { "@type": "WPHeader", "potentialAction": [ { "@type": "Action", "name": "POST YOUR ARTICLE", "target": "https://www.globalair.com/Articles/Edit" }, { "@type": "Action", "name": "Register", "target": "https://www.globalair.com/register" } ] }, { "@type": "WPFooter", "copyrightYear": "2022", "description": "GlobalAir.com. All rights reserved.", "copyrightHolder": { "@type": "Organization", "name": "GlobalAir.com" } }, { "@type": "SiteNavigationElement", "name": "Home", "url": "https://www.globalair.com", "description": "Home", "position": 1 }, { "@type": "SiteNavigationElement", "name": "Aircraft For Sale", "url": "https://www.globalair.com/aircraft-for-sale", "description": "Aircraft For Sale", "position": 2 }, { "@type": "SiteNavigationElement", "name": "Aviation Directory", "url": "https://www.globalair.com/directories/", "description": "Aviation Directory", "position": 3 }, { "@type": "SiteNavigationElement", "name": "Airport Search", "url": "https://www.globalair.com/airport/default.aspx", "description": "Airport Search", "position": 4 }, { "@type": "SiteNavigationElement", "name": "Aviation News", "url": "https://www.globalair.com/Articles", "description": "General and Corporate Aviation Headline News, Press and Insights", "position": 6 }, { "@type": "SiteNavigationElement", "name": "Amphibian", "url": "https://www.globalair.com/aircraft-for-sale/Amphibian", "description": "Amphibian For Sale", "position": 6 }, { "@type": "SiteNavigationElement", "name": "Commercial", "url": "https://www.globalair.com/aircraft-for-sale/Commercial", "description": "Commercial For Sale", "position": 7 }, { "@type": "SiteNavigationElement", "name": "Experimental/Kits", "url": "https://www.globalair.com/aircraft-for-sale/Experimental-Kit", "description": "Experimental/Kits For Sale", "position": 8 }, { "@type": "SiteNavigationElement", "name": "Helicopter", "url": "https://www.globalair.com/aircraft-for-sale/Helicopters", "description": "Helicopter For Sale", "position": 9 }, { "@type": "SiteNavigationElement", "name": "Jets", "url": "https://www.globalair.com/aircraft-for-sale/Private-Jet", "description": "Jets For Sale", "position": 10 }, { "@type": "SiteNavigationElement", "name": "Single Engine Turbine", "url": "https://www.globalair.com/aircraft-for-sale/Single-Engine-Turbine", "description": "Single Engine Turbine For Sale", "position": 11 }, { "@type": "SiteNavigationElement", "name": "Singles", "url": "https://www.globalair.com/aircraft-for-sale/Single-Engine-Piston", "description": "Singles For Sale", "position": 12 }, { "@type": "SiteNavigationElement", "name": "Twin Pistons", "url": "https://www.globalair.com/aircraft-for-sale/Twin-Engine-Piston", "description": "Twin Pistons For Sale", "position": 13 }, { "@type": "SiteNavigationElement", "name": "Twin Turbines", "url": "https://www.globalair.com/aircraft-for-sale/Twin-Engine-Turbine", "description": "Twin Turbines For Sale", "position": 14 }, { "@type": "SiteNavigationElement", "name": "Vintage", "url": "https://www.globalair.com/aircraft-for-sale/Vintage", "description": "Vintage For Sale", "position": 15 }, { "@type": "SiteNavigationElement", "name": "Warbirds", "url": "https://www.globalair.com/aircraft-for-sale/Warbird", "description": "Warbirds For Sale", "position": 16 }, { "@type": "SiteNavigationElement", "name": "Light Sport", "url": "https://www.globalair.com/aircraft-for-sale/Light-Sport", "description": "Light Sport For Sale", "position": 17 } ] } </script>
 	<link href="./Airport Weather &amp; FBO Fuel Prices _ GlobalAir.com_files/bootstrap.custom.css" rel="stylesheet" media="all">
 	<link href="./Airport Weather &amp; FBO Fuel Prices _ GlobalAir.com_files/style.css" rel="stylesheet" media="all">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+
 	<style>
 	.footer a {
 		text-decoration: none
@@ -482,8 +484,76 @@
                 label{
                     font-weight: 600;
                 }
-				
-				.section-title {
+        .wrapper2 {
+            width: 100%;
+            display: grid;
+            place-items: center;
+            gap: 15px;
+        }
+
+        .container2 {
+            height: 150px;
+            width: 30%;
+            background-color: #ffffff;
+            box-shadow: 0 0 25px rgba(17, 1, 68, 0.08);
+            border-radius: 8px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .inputCheckbox input {
+            -webkit-appearance: none;
+            position: relative;
+            width: 100%;
+            cursor: pointer;
+            border: none
+        }
+
+            .inputCheckbox input:after {
+                position: absolute;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 400;
+                content: "\f111";
+                font-size: 18px;
+                color: #478bfb;
+                right: 10px;
+                top: -5px;
+            }
+
+            .inputCheckbox input:checked:after {
+                font-weight: 900;
+                content: "\f058";
+                color: #478bfb;
+            }
+
+        .container2 img {
+            width: 50%;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            cursor: pointer;
+        }
+
+        @media screen and (min-width: 950px) {
+            .wrapper2 {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+
+            .container2 {
+                height: 160px;
+                width: 90%;
+            }
+
+            input[type="checkbox"]:after {
+                font-size: 22px;
+            }
+        }
+        
+					.section-title {
 						position: relative;
 						text-transform: uppercase;
 						margin-bottom: 1.875rem;
@@ -542,188 +612,45 @@
 								<div class="card float-right">
 									<div class="row mt-4">
                                         <form>
-											
                                             <h2 class="section-title display-6">
-                                                FBO Information
+                                                Basic Services
                                             </h2>
-                                            <div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
-                                                <span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
-                                                    Basic Info
-                                                </span>
-                                            </div>
-                                            <div class="row mb-2">
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputEmail1" class="form-label">Manager</label>
-                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputtext1" class="form-label">Address</label>
-                                                    <input type="text" class="form-control" id="exampleInputtext1">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputEmail1" class="form-label">Address 2</label>
-                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputtext1" class="form-label">City</label>
-                                                    <input type="text" class="form-control" id="exampleInputtext1">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputEmail1" class="form-label">State</label>
-                                                    <select class="form-select" aria-label="Default select example" id="exampleInputEmail1">
-                                                        <option selected>Select a Location</option>
-                                                        <option value="1">One</option>
-                                                        <option value="2">Two</option>
-                                                        <option value="3">Three</option>
-                                                      </select>
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputtext1" class="form-label">Zip</label>
-                                                    <input type="text" class="form-control" id="exampleInputtext1">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputEmail1" class="form-label">Telephone</label>
-                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputtext1" class="form-label">Fax</label>
-                                                    <input type="text" class="form-control" id="exampleInputtext1">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputEmail1" class="form-label">Arinc</label>
-                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputtext1" class="form-label">Unicom</label>
-                                                    <input type="text" class="form-control" id="exampleInputtext1">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputEmail1" class="form-label">FAA Repair Code</label>
-                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputtext1" class="form-label">Email</label>
-                                                    <input type="text" class="form-control" id="exampleInputtext1">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputEmail1" class="form-label">URL</label>
-                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputtext1" class="form-label">Airport</label>
-                                                    <a href="#" class="text-decoration-none"><input type="text" class="form-control" readonly id="exampleInputtext1" value="VNY" style="cursor: pointer"></a>
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputEmail1" class="form-label">Operating Hours</label>
-                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputtext1" class="form-label">Ramp Fee</label>
-                                                    <input type="text" class="form-control" id="exampleInputtext1">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputEmail1" class="form-label">Explain Ramp Fee</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputtext1" class="form-label">FBO Description</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                                </div>
-                                                
-                                            </div>
-                                            <div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
-                                                <span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
-                                                    Credit Cards Accepted
-                                                </span>
-                                            </div>
-                                            <div class="row mt-5 mb-5">
-                                                <div class="col-6 col-md-3">
-                                                <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                                                    <label class="form-check-label" for="flexSwitchCheckChecked">Mastercard</label>
-                                                  </div>
-                                                </div>
-                                                <div class="col-6 col-md-3">
-                                                <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                                                    <label class="form-check-label" for="flexSwitchCheckChecked">Visa</label>
-                                                  </div>
-                                                </div>
-                                                <div class="col-6 col-md-3">
-                                                <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                                                    <label class="form-check-label" for="flexSwitchCheckChecked">American Express</label>
-                                                  </div>
-                                                </div>
-                                                <div class="col-6 col-md-3">
-                                                <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                                                    <label class="form-check-label" for="flexSwitchCheckChecked">Discover</label>
-                                                  </div>
-                                                </div>
-                                            </div>
-                                            <div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
-                                                <span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
-                                                    FBO Photos
-                                                </span>
-                                            </div>
-                                            <div class="row p-3">
-                                                <span class="alert alert-info" style="font-size: 20px">
-                                                    <a href="#">Click here</a> to view and manage your FBO Photos
-                                                </span>
-                                            </div>
-                                            <div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
-                                                <span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
-                                                    FBO Logo
-                                                </span>
-                                            </div>
                                             <div class="row p-3 mb-3">
-                                                <div class="col-12 col-md-4 text-center mb-2">
-                                                    <img src="https://resources.globalair.com/airport/images/complogo/30681.jpg">
-                                                    <br><br>
-                                                    <a href="#" class="btn btn-danger rounded">Delete Logo</a>
+                                                <div class="col-4 p-3">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                                        <label class="form-check-label" for="flexSwitchCheckChecked">Catering</label>
+                                                    </div>
                                                 </div>
-                                                <div class="col-12 col-md-8">
-                                                        <p>
-                                                            To change your FBO's logo, click the Browse button,
-                                                            select a new file (in .jpg or .jpeg format), then click the Upload
-                                                            button. 
-                                                        </p>
-                                                        <p>
-                                                            The maximum width for your logo is 175 pixels. If you upload
-                                                            an image larger than 175 pixels wide, it will be re-sized automatically.
-                                                        </p>
-                                                    <div class="input-group mb-3">
-                                                        <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                                                        <input type="file" class="form-control" id="inputGroupFile01">
-                                                      </div>
+                                                <div class="col-4 p-3">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                                        <label class="form-check-label" for="flexSwitchCheckChecked">Hotel</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
-                                                <span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
-                                                    FBO Manager's Photo
-                                                </span>
-                                            </div>
-                                            <div class="row p-3">
-                                                <div class="col-12 col-md-4 text-center mb-2">
-                                                    <img src="https://www.globalair.com/fbo/noimage.gif">
-                                                    <br><br>
+                                                <div class="col-4 p-3">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                                        <label class="form-check-label" for="flexSwitchCheckChecked">Courtesy Car</label>
+                                                    </div>
                                                 </div>
-                                                <div class="col-12 col-md-8">
-                                                        <p>
-                                                            To add your FBO's manager's photo, click the Browse button,
-                                                            select the file (in .jpg or .jpeg format), then click the Upload
-                                                            button.
-                                                        </p>
-                                                        <p>
-                                                            The maximum width for your FBO manager's photo is 100 pixels. If you upload
-                                                            an image larger than 100 pixels wide, it will be re-sized automatically.
-                                                        </p>
-                                                    <div class="input-group mb-3">
-                                                        <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                                                        <input type="file" class="form-control" id="inputGroupFile01">
-                                                      </div>
+                                                <div class="col-4 p-3">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                                                        <label class="form-check-label" for="flexSwitchCheckChecked">Weather</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 p-3">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                                                        <label class="form-check-label" for="flexSwitchCheckChecked">Repairs</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 p-3">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                                        <label class="form-check-label" for="flexSwitchCheckChecked">Rental Cars</label>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="mb-3 col-12 text-center">

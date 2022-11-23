@@ -44,6 +44,8 @@
 	<script async="" defer="" type="application/ld+json"> { "@context": "http://schema.org", "@graph": [ { "@type": "WPHeader", "potentialAction": [ { "@type": "Action", "name": "POST YOUR ARTICLE", "target": "https://www.globalair.com/Articles/Edit" }, { "@type": "Action", "name": "Register", "target": "https://www.globalair.com/register" } ] }, { "@type": "WPFooter", "copyrightYear": "2022", "description": "GlobalAir.com. All rights reserved.", "copyrightHolder": { "@type": "Organization", "name": "GlobalAir.com" } }, { "@type": "SiteNavigationElement", "name": "Home", "url": "https://www.globalair.com", "description": "Home", "position": 1 }, { "@type": "SiteNavigationElement", "name": "Aircraft For Sale", "url": "https://www.globalair.com/aircraft-for-sale", "description": "Aircraft For Sale", "position": 2 }, { "@type": "SiteNavigationElement", "name": "Aviation Directory", "url": "https://www.globalair.com/directories/", "description": "Aviation Directory", "position": 3 }, { "@type": "SiteNavigationElement", "name": "Airport Search", "url": "https://www.globalair.com/airport/default.aspx", "description": "Airport Search", "position": 4 }, { "@type": "SiteNavigationElement", "name": "Aviation News", "url": "https://www.globalair.com/Articles", "description": "General and Corporate Aviation Headline News, Press and Insights", "position": 6 }, { "@type": "SiteNavigationElement", "name": "Amphibian", "url": "https://www.globalair.com/aircraft-for-sale/Amphibian", "description": "Amphibian For Sale", "position": 6 }, { "@type": "SiteNavigationElement", "name": "Commercial", "url": "https://www.globalair.com/aircraft-for-sale/Commercial", "description": "Commercial For Sale", "position": 7 }, { "@type": "SiteNavigationElement", "name": "Experimental/Kits", "url": "https://www.globalair.com/aircraft-for-sale/Experimental-Kit", "description": "Experimental/Kits For Sale", "position": 8 }, { "@type": "SiteNavigationElement", "name": "Helicopter", "url": "https://www.globalair.com/aircraft-for-sale/Helicopters", "description": "Helicopter For Sale", "position": 9 }, { "@type": "SiteNavigationElement", "name": "Jets", "url": "https://www.globalair.com/aircraft-for-sale/Private-Jet", "description": "Jets For Sale", "position": 10 }, { "@type": "SiteNavigationElement", "name": "Single Engine Turbine", "url": "https://www.globalair.com/aircraft-for-sale/Single-Engine-Turbine", "description": "Single Engine Turbine For Sale", "position": 11 }, { "@type": "SiteNavigationElement", "name": "Singles", "url": "https://www.globalair.com/aircraft-for-sale/Single-Engine-Piston", "description": "Singles For Sale", "position": 12 }, { "@type": "SiteNavigationElement", "name": "Twin Pistons", "url": "https://www.globalair.com/aircraft-for-sale/Twin-Engine-Piston", "description": "Twin Pistons For Sale", "position": 13 }, { "@type": "SiteNavigationElement", "name": "Twin Turbines", "url": "https://www.globalair.com/aircraft-for-sale/Twin-Engine-Turbine", "description": "Twin Turbines For Sale", "position": 14 }, { "@type": "SiteNavigationElement", "name": "Vintage", "url": "https://www.globalair.com/aircraft-for-sale/Vintage", "description": "Vintage For Sale", "position": 15 }, { "@type": "SiteNavigationElement", "name": "Warbirds", "url": "https://www.globalair.com/aircraft-for-sale/Warbird", "description": "Warbirds For Sale", "position": 16 }, { "@type": "SiteNavigationElement", "name": "Light Sport", "url": "https://www.globalair.com/aircraft-for-sale/Light-Sport", "description": "Light Sport For Sale", "position": 17 } ] } </script>
 	<link href="./Airport Weather &amp; FBO Fuel Prices _ GlobalAir.com_files/bootstrap.custom.css" rel="stylesheet" media="all">
 	<link href="./Airport Weather &amp; FBO Fuel Prices _ GlobalAir.com_files/style.css" rel="stylesheet" media="all">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+
 	<style>
 	.footer a {
 		text-decoration: none
@@ -482,8 +484,75 @@
                 label{
                     font-weight: 600;
                 }
-				
-				.section-title {
+        .wrapper2 {
+            width: 100%;
+            display: grid;
+            place-items: center;
+            gap: 15px;
+        }
+
+        .container2 {
+            height: 150px;
+            width: 30%;
+            background-color: #ffffff;
+            box-shadow: 0 0 25px rgba(17, 1, 68, 0.08);
+            border-radius: 8px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .inputCheckbox input {
+            -webkit-appearance: none;
+            position: relative;
+            width: 100%;
+            cursor: pointer;
+            border: none
+        }
+
+            .inputCheckbox input:after {
+                position: absolute;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 400;
+                content: "\f111";
+                font-size: 18px;
+                color: #478bfb;
+                right: 10px;
+                top: -5px;
+            }
+
+            .inputCheckbox input:checked:after {
+                font-weight: 900;
+                content: "\f058";
+                color: #478bfb;
+            }
+
+        .container2 img {
+            width: 80%;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            cursor: pointer;
+        }
+
+        @media screen and (min-width: 950px) {
+            .wrapper2 {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+
+            .container2 {
+                height: 160px;
+                width: 90%;
+            }
+
+            input[type="checkbox"]:after {
+                font-size: 22px;
+            }
+        }
+					.section-title {
 						position: relative;
 						text-transform: uppercase;
 						margin-bottom: 1.875rem;
@@ -542,188 +611,350 @@
 								<div class="card float-right">
 									<div class="row mt-4">
                                         <form>
-											
                                             <h2 class="section-title display-6">
-                                                FBO Information
+                                                Logo Services
                                             </h2>
+                                            <h3>You are currently allowed
+                                                <span id="Content_lblNumLogoServices" style="color:#007000;">10</span>
+                                                logo services.</h3>
+                                            <p>If you would like to purchase additional logo services, please call us at 888-236-4309 or email at webmaster@globalair.com.</p>
                                             <div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
                                                 <span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
-                                                    Basic Info
+                                                    FAA Services
                                                 </span>
                                             </div>
-                                            <div class="row mb-2">
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputEmail1" class="form-label">Manager</label>
-                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputtext1" class="form-label">Address</label>
-                                                    <input type="text" class="form-control" id="exampleInputtext1">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputEmail1" class="form-label">Address 2</label>
-                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputtext1" class="form-label">City</label>
-                                                    <input type="text" class="form-control" id="exampleInputtext1">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputEmail1" class="form-label">State</label>
-                                                    <select class="form-select" aria-label="Default select example" id="exampleInputEmail1">
-                                                        <option selected>Select a Location</option>
-                                                        <option value="1">One</option>
-                                                        <option value="2">Two</option>
-                                                        <option value="3">Three</option>
-                                                      </select>
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputtext1" class="form-label">Zip</label>
-                                                    <input type="text" class="form-control" id="exampleInputtext1">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputEmail1" class="form-label">Telephone</label>
-                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputtext1" class="form-label">Fax</label>
-                                                    <input type="text" class="form-control" id="exampleInputtext1">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputEmail1" class="form-label">Arinc</label>
-                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputtext1" class="form-label">Unicom</label>
-                                                    <input type="text" class="form-control" id="exampleInputtext1">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputEmail1" class="form-label">FAA Repair Code</label>
-                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputtext1" class="form-label">Email</label>
-                                                    <input type="text" class="form-control" id="exampleInputtext1">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputEmail1" class="form-label">URL</label>
-                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputtext1" class="form-label">Airport</label>
-                                                    <a href="#" class="text-decoration-none"><input type="text" class="form-control" readonly id="exampleInputtext1" value="VNY" style="cursor: pointer"></a>
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputEmail1" class="form-label">Operating Hours</label>
-                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputtext1" class="form-label">Ramp Fee</label>
-                                                    <input type="text" class="form-control" id="exampleInputtext1">
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputEmail1" class="form-label">Explain Ramp Fee</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-
-                                                </div>
-                                                <div class="mb-3 col-6">
-                                                    <label for="exampleInputtext1" class="form-label">FBO Description</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                                </div>
-                                                
-                                            </div>
-                                            <div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
-                                                <span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
-                                                    Credit Cards Accepted
-                                                </span>
-                                            </div>
-                                            <div class="row mt-5 mb-5">
-                                                <div class="col-6 col-md-3">
-                                                <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                                                    <label class="form-check-label" for="flexSwitchCheckChecked">Mastercard</label>
-                                                  </div>
-                                                </div>
-                                                <div class="col-6 col-md-3">
-                                                <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                                                    <label class="form-check-label" for="flexSwitchCheckChecked">Visa</label>
-                                                  </div>
-                                                </div>
-                                                <div class="col-6 col-md-3">
-                                                <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                                                    <label class="form-check-label" for="flexSwitchCheckChecked">American Express</label>
-                                                  </div>
-                                                </div>
-                                                <div class="col-6 col-md-3">
-                                                <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                                                    <label class="form-check-label" for="flexSwitchCheckChecked">Discover</label>
-                                                  </div>
+                                            <div class="container p-4 mt-4">
+                                                <div class="row wrapper2">
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService01" type="checkbox" name="ctl00$Content$chkLogoService01" /></span>
+                                                        <label for="Content_chkLogoService01">
+                                                            <img src="https://www.globalair.com/fbo/images/serv1.gif" title="NATA Safety 1st" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService02" type="checkbox" name="ctl00$Content$chkLogoService02" /></span>
+                                                        <label for="Content_chkLogoService02">
+                                                            <img src="https://www.globalair.com/fbo/images/serv2.gif" title="U.S. Government Fuel" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService03" type="checkbox" name="ctl00$Content$chkLogoService03" /></span>
+                                                        <label for="Content_chkLogoService03">
+                                                            <img src="https://www.globalair.com/fbo/images/serv3.gif" title="U.S. Customs Service" style="width: 60%" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService63" type="checkbox" name="ctl00$Content$chkLogoService63" /></span>
+                                                        <label for="Content_chkLogoService63">
+                                                            <img src="https://www.globalair.com/fbo/images/serv63.gif" title="U.S. Air Card" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService35" type="checkbox" name="ctl00$Content$chkLogoService35" /></span>
+                                                        <label for="Content_chkLogoService35">
+                                                            <img src="https://www.globalair.com/fbo/images/serv35.gif" title="CATS Testing Center" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService36" type="checkbox" name="ctl00$Content$chkLogoService36" /></span>
+                                                        <label for="Content_chkLogoService36">
+                                                            <img src="https://www.globalair.com/fbo/images/serv36.gif" title="FAA Authorized Chart Agent" style="width: 55%" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService60" type="checkbox" name="ctl00$Content$chkLogoService60" /></span>
+                                                        <label for="Content_chkLogoService60">
+                                                            <img src="https://www.globalair.com/fbo/images/serv60.gif" title="International Standard for Business Aircraft Handling (IS-BAH)" style="width: 55%" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService79" type="checkbox" name="ctl00$Content$chkLogoService79" /></span>
+                                                        <label for="Content_chkLogoService79">
+                                                            <img src="https://www.globalair.com/fbo/images/serv79.gif" title="Safety 1st Clean" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService80" type="checkbox" name="ctl00$Content$chkLogoService80" /></span>
+                                                        <label for="Content_chkLogoService80">
+                                                            <img src="https://www.globalair.com/fbo/images/serv80.gif" title="Part141FAA Training" />
+                                                        </label>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
                                                 <span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
-                                                    FBO Photos
+                                                    Weather Services
                                                 </span>
                                             </div>
-                                            <div class="row p-3">
-                                                <span class="alert alert-info" style="font-size: 20px">
-                                                    <a href="#">Click here</a> to view and manage your FBO Photos
-                                                </span>
-                                            </div>
-                                            <div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
-                                                <span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
-                                                    FBO Logo
-                                                </span>
-                                            </div>
-                                            <div class="row p-3 mb-3">
-                                                <div class="col-12 col-md-4 text-center mb-2">
-                                                    <img src="https://resources.globalair.com/airport/images/complogo/30681.jpg">
-                                                    <br><br>
-                                                    <a href="#" class="btn btn-danger rounded">Delete Logo</a>
-                                                </div>
-                                                <div class="col-12 col-md-8">
-                                                        <p>
-                                                            To change your FBO's logo, click the Browse button,
-                                                            select a new file (in .jpg or .jpeg format), then click the Upload
-                                                            button. 
-                                                        </p>
-                                                        <p>
-                                                            The maximum width for your logo is 175 pixels. If you upload
-                                                            an image larger than 175 pixels wide, it will be re-sized automatically.
-                                                        </p>
-                                                    <div class="input-group mb-3">
-                                                        <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                                                        <input type="file" class="form-control" id="inputGroupFile01">
-                                                      </div>
+                                            <div class="container p-4 mt-4">
+                                                <div class="row wrapper2">
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService04" type="checkbox" name="ctl00$Content$chkLogoService04" /></span>
+                                                        <label for="Content_chkLogoService04">
+                                                            <img src="https://www.globalair.com/fbo/images/serv4.gif" title="Meteorlogix" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService05" type="checkbox" name="ctl00$Content$chkLogoService05" /></span>
+                                                        <label for="Content_chkLogoService05">
+                                                            <img src="https://www.globalair.com/fbo/images/serv5.gif" title="Weathertap" style="width: 50%" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService06" type="checkbox" name="ctl00$Content$chkLogoService06" /></span>
+                                                        <label for="Content_chkLogoService06">
+                                                            <img src="https://www.globalair.com/fbo/images/serv6.gif" title="WSI Pilotbrief" style="width: 60%" />
+                                                        </label>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
                                                 <span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
-                                                    FBO Manager's Photo
+                                                    Car Rental Services
                                                 </span>
                                             </div>
-                                            <div class="row p-3">
-                                                <div class="col-12 col-md-4 text-center mb-2">
-                                                    <img src="https://www.globalair.com/fbo/noimage.gif">
-                                                    <br><br>
+                                            <div class="container p-4 mt-4">
+                                                <div class="row wrapper2">
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService13" type="checkbox" name="ctl00$Content$chkLogoService13" /></span>
+                                                        <label for="Content_chkLogoService13">
+                                                            <img src="https://www.globalair.com/fbo/images/serv13.gif" title="Advantage Rent A Car" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService14" type="checkbox" name="ctl00$Content$chkLogoService14" /></span>
+                                                        <label for="Content_chkLogoService14">
+                                                            <img src="https://www.globalair.com/fbo/images/serv14.gif" title="Alamo Rent A Car" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService15" type="checkbox" name="ctl00$Content$chkLogoService15" /></span>
+                                                        <label for="Content_chkLogoService15">
+                                                            <img src="https://www.globalair.com/fbo/images/serv15.gif" title="Avis" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService16" type="checkbox" name="ctl00$Content$chkLogoService16" /></span>
+                                                        <label for="Content_chkLogoService16">
+                                                            <img src="https://www.globalair.com/fbo/images/serv16.gif" title="Budget Rent A Car" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService17" type="checkbox" name="ctl00$Content$chkLogoService17" /></span>
+                                                        <label for="Content_chkLogoService17">
+                                                            <img src="https://www.globalair.com/fbo/images/serv17.gif" title="Dollar Rent A Car" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService18" type="checkbox" name="ctl00$Content$chkLogoService18" /></span>
+                                                        <label for="Content_chkLogoService18">
+                                                            <img src="https://www.globalair.com/fbo/images/serv18.gif" title="Enterprise Rent A Car" style="width: 50%" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService19" type="checkbox" name="ctl00$Content$chkLogoService19" /></span>
+                                                        <label for="Content_chkLogoService19">
+                                                            <img src="https://www.globalair.com/fbo/images/serv19.gif" title="Hertz" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService20" type="checkbox" name="ctl00$Content$chkLogoService20" /></span>
+                                                        <label for="Content_chkLogoService20">
+                                                            <img src="https://www.globalair.com/fbo/images/serv20.gif" title="National Car Rental" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService21" type="checkbox" name="ctl00$Content$chkLogoService21" /></span>
+                                                        <label for="Content_chkLogoService21">
+                                                            <img src="https://www.globalair.com/fbo/images/serv21.gif" title="Thrifty Car Rental" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService56" type="checkbox" name="ctl00$Content$chkLogoService56" /></span>
+                                                        <label for="Content_chkLogoService56">
+                                                            <img src="https://www.globalair.com/fbo/images/serv56.gif" title="Sixt Rent A Car" />
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                                <div class="col-12 col-md-8">
-                                                        <p>
-                                                            To add your FBO's manager's photo, click the Browse button,
-                                                            select the file (in .jpg or .jpeg format), then click the Upload
-                                                            button.
-                                                        </p>
-                                                        <p>
-                                                            The maximum width for your FBO manager's photo is 100 pixels. If you upload
-                                                            an image larger than 100 pixels wide, it will be re-sized automatically.
-                                                        </p>
-                                                    <div class="input-group mb-3">
-                                                        <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                                                        <input type="file" class="form-control" id="inputGroupFile01">
-                                                      </div>
+                                            </div>
+                                            <div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
+                                                <span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
+                                                    Authorized Maintenance Facility Services
+                                                </span>
+                                            </div>
+                                            <div class="container p-4 mt-4">
+                                                <div class="row wrapper2">
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService22" type="checkbox" name="ctl00$Content$chkLogoService22" /></span>
+                                                        <label for="Content_chkLogoService22">
+                                                            <img src="https://www.globalair.com/fbo/images/serv22.gif" title="Beechcraft Sales / Service Center" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService47" type="checkbox" name="ctl00$Content$chkLogoService47" /></span>
+                                                        <label for="Content_chkLogoService47">
+                                                            <img src="https://www.globalair.com/fbo/images/serv47.gif" title="Embraer" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService72" type="checkbox" name="ctl00$Content$chkLogoService72" /></span>
+                                                        <label for="Content_chkLogoService72">
+                                                            <img src="https://www.globalair.com/fbo/images/serv72.gif" title="Bombardier Service" style="width:70%"/>
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService26" type="checkbox" name="ctl00$Content$chkLogoService26" /></span>
+                                                        <label for="Content_chkLogoService26">
+                                                            <img src="https://www.globalair.com/fbo/images/serv26.gif" title="Diamond Aircraft" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService30" type="checkbox" name="ctl00$Content$chkLogoService30" /></span>
+                                                        <label for="Content_chkLogoService30">
+                                                            <img src="https://www.globalair.com/fbo/images/serv30.gif" title="New Piper Authorized Sales Center" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService73" type="checkbox" name="ctl00$Content$chkLogoService73" /></span>
+                                                        <label for="Content_chkLogoService73">
+                                                            <img src="https://www.globalair.com/fbo/images/serv73.gif" title="Dassault Service" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService31" type="checkbox" name="ctl00$Content$chkLogoService31" /></span>
+                                                        <label for="Content_chkLogoService31">
+                                                            <img src="https://www.globalair.com/fbo/images/serv31.gif" title="New Piper Service Center" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService32" type="checkbox" name="ctl00$Content$chkLogoService32" /></span>
+                                                        <label for="Content_chkLogoService32">
+                                                            <img src="https://www.globalair.com/fbo/images/serv32.gif" title="Pratt & Whitney Service Center" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService33" type="checkbox" name="ctl00$Content$chkLogoService33" /></span>
+                                                        <label for="Content_chkLogoService33">
+                                                            <img src="https://www.globalair.com/fbo/images/serv33.gif" title="Raytheon Authorized Service Center" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService45" type="checkbox" name="ctl00$Content$chkLogoService45" /></span>
+                                                        <label for="Content_chkLogoService45">
+                                                            <img src="https://www.globalair.com/fbo/images/serv45.gif" title="Cirrus Service Center" style="width:70%" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService37" type="checkbox" name="ctl00$Content$chkLogoService37" /></span>
+                                                        <label for="Content_chkLogoService37">
+                                                            <img src="https://www.globalair.com/fbo/images/serv37.gif" title="Jeppesen Authorized Dealer" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService46" type="checkbox" name="ctl00$Content$chkLogoService46" /></span>
+                                                        <label for="Content_chkLogoService46">
+                                                            <img src="https://www.globalair.com/fbo/images/serv46.gif" title="Honeywell" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService75" type="checkbox" name="ctl00$Content$chkLogoService75" /></span>
+                                                        <label for="Content_chkLogoService75">
+                                                            <img src="https://www.globalair.com/fbo/images/serv75.gif" title="Bell" style="width:70%" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService76" type="checkbox" name="ctl00$Content$chkLogoService76" /></span>
+                                                        <label for="Content_chkLogoService76">
+                                                            <img src="https://www.globalair.com/fbo/images/serv76.gif" title="Textron" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService77" type="checkbox" name="ctl00$Content$chkLogoService77" /></span>
+                                                        <label for="Content_chkLogoService77">
+                                                            <img src="https://www.globalair.com/fbo/images/serv77.gif" title="Robinson" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService78" type="checkbox" name="ctl00$Content$chkLogoService78" /></span>
+                                                        <label for="Content_chkLogoService78">
+                                                            <img src="https://www.globalair.com/fbo/images/serv78.gif" title="Part 145" style="width:70%"/>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style="height: 20px;border-bottom: 1px solid black;text-align: center;margin-bottom: 30px;">
+                                                <span style="background-color: white;padding: -27px;padding-left: 10px;padding-right: 10px;top: -10px;position: relative;" class="display-6">
+                                                    Other Services
+                                                </span>
+                                            </div>
+                                            <div class="container p-4 mt-4">
+                                                <div class="wrapper2">
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService34" type="checkbox" name="ctl00$Content$chkLogoService34" /></span>
+                                                        <label for="Content_chkLogoService34">
+                                                            <img src="https://www.globalair.com/fbo/images/serv34.gif" title="Better Business Bureau" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService38" type="checkbox" name="ctl00$Content$chkLogoService38" /></span>
+                                                        <label for="Content_chkLogoService38">
+                                                            <img src="https://www.globalair.com/fbo/images/serv38.gif" title="LaserGrade Testing Center" style="width: 62%"  />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService39" type="checkbox" name="ctl00$Content$chkLogoService39" /></span>
+                                                        <label for="Content_chkLogoService39">
+                                                            <img src="https://www.globalair.com/fbo/images/serv39.gif" title="National Association of Flight Instructors" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService40" type="checkbox" name="ctl00$Content$chkLogoService40" /></span>
+                                                        <label for="Content_chkLogoService40">
+                                                            <img src="https://www.globalair.com/fbo/images/serv40.gif" title="National Business Aviation Association" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService42" type="checkbox" name="ctl00$Content$chkLogoService42" /></span>
+                                                        <label for="Content_chkLogoService42">
+                                                            <img src="https://www.globalair.com/fbo/images/serv42.gif" title="Wireless Internet Access" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService54" type="checkbox" name="ctl00$Content$chkLogoService54" /></span>
+                                                        <label for="Content_chkLogoService54">
+                                                            <img src="https://www.globalair.com/fbo/images/serv54.gif" title="CAA Preferred FBO" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService11" type="checkbox" name="ctl00$Content$chkLogoService11" /></span>
+                                                        <label for="Content_chkLogoService11">
+                                                            <img src="https://www.globalair.com/fbo/images/serv11.gif" title="Avnet Premier FBO" style="width: 60%" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService74" type="checkbox" name="ctl00$Content$chkLogoService74" /></span>
+                                                        <label for="Content_chkLogoService74">
+                                                            <img src="https://www.globalair.com/fbo/images/serv74.gif" title="Everest Fuel Service" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService83" type="checkbox" name="ctl00$Content$chkLogoService83" /></span>
+                                                        <label for="Content_chkLogoService83">
+                                                            <img src="https://www.globalair.com/fbo/images/serv83.gif" title="Go Rental" style="width: 62%" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService81" type="checkbox" name="ctl00$Content$chkLogoService81" /></span>
+                                                        <label for="Content_chkLogoService81">
+                                                            <img src="https://www.globalair.com/fbo/images/serv81.gif" title="World Fuel Services" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="container2">
+                                                        <span class="inputCheckbox"><input id="Content_chkLogoService82" type="checkbox" name="ctl00$Content$chkLogoService82" /></span>
+                                                        <label for="Content_chkLogoService82">
+                                                            <img src="https://www.globalair.com/fbo/images/serv82.gif" title="World Fuel Rewards" />
+                                                        </label>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="mb-3 col-12 text-center">
