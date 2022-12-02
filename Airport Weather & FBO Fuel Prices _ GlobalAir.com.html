@@ -88,6 +88,10 @@
 	#airportTable_filter {
 		margin-bottom: 5px
 	}
+	.card-animation:hover{
+		transform:scale(1.05);
+		box-shadow:10px 10px 10px #888888;
+	}
 	</style>
 	<script src="./Airport Weather &amp; FBO Fuel Prices _ GlobalAir.com_files/gpt.js.download"></script>
 	<meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
@@ -470,6 +474,10 @@
 					color: #fff;
 				}
 				
+				.l-bg-light {
+					background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+				}
+
 				#navbarsExample2 a {
 					color: rgb(233, 233, 233);
 					border-bottom: rgb(233, 233, 233) 2px solid;
@@ -500,19 +508,17 @@
                             FBO Information
                         </a> <a href="#" class="list-group-item list-group-item-action list-item-custom bg-dark p-3">
                         FBO Photos
-                    </a> <a href="#" class="list-group-item list-group-item-action list-item-custom bg-dark p-3">
+                    </a> <a href="fuel.html" class="list-group-item list-group-item-action list-item-custom bg-dark p-3">
                         Update Fuel Prices
                     </a> <a href="#" class="list-group-item list-group-item-action list-item-custom bg-dark p-3">
-                        Basic Services
-                    </a> <a href="#" class="list-group-item list-group-item-action list-item-custom bg-dark p-3">
                         Ratings and Reviews
-                    </a> <a href="#" class="list-group-item list-group-item-action list-item-custom bg-dark p-3">
-                            Extended Services
-                        </a> <a href="#" class="list-group-item list-group-item-action list-item-custom bg-dark p-3">
+                    </a> <a href="extented.html" class="list-group-item list-group-item-action list-item-custom bg-dark p-3">
+						Extended & Basic Services
+					</a> <a href="fuelcards.html" class="list-group-item list-group-item-action list-item-custom bg-dark p-3">
                         Fuel Cards
-                    </a> <a href="#" class="list-group-item list-group-item-action list-item-custom bg-dark p-3">
+                    </a> <a href="logo.html" class="list-group-item list-group-item-action list-item-custom bg-dark p-3">
                         Logo Services
-                    </a> <a href="#" class="list-group-item list-group-item-action list-item-custom bg-dark p-3">
+                    </a> <a href="CustomService.html" class="list-group-item list-group-item-action list-item-custom bg-dark p-3">
                         Custom Services
                     </a> </div>
 							</div>
@@ -524,11 +530,11 @@
 										<div class="col-sm-5"> <img class="d-block mt-3 mb-3" src="https://resources.globalair.com/airport/images/complogo/3068.jpg" alt="" style=" display: block;
                         margin-left: auto;
                         margin-right: auto;">
-											<div class="card l-bg-green-dark">
+											<div class="card card-animation l-bg-green-dark">
 												<div class="card-statistic-3 p-4">
 													<div class="card-icon card-icon-large"></div>
 													<div class="mb-4">
-														<h5 class="card-title mb-0">FBO Level</h5>
+														<h5 class="card-title mb-0 ">FBO Level</h5>
 														<h2 class="d-flex align-items-center mb-0">
                                         PLATINUM
                                     </h2> </div>
@@ -572,7 +578,7 @@
 							
 							<div class="row">
 								<div class="col-12">
-									<div class="card p-4" style="background:linear-gradient(135deg, #65799b 0%,#5e2563 100%); color: white;">
+									<div class="card p-4">
 									<div class="row">
 										<div class="col-sm-7"> 
 											<h4 class="card-subtitle mb-2"><b>Your fuel prices were last updated: </b>
@@ -600,7 +606,7 @@
 							<div class="row ms-1 mt-2">
 
 								<div class="col-xl-4 col-lg-4">
-									<div class="card l-bg-cherry">
+									<div class="card card-animation l-bg-light">
 										<div class="card-statistic-3 p-4">
 											<div class="card-icon card-icon-large"><img src="click.png" /></div>
 											<div class="mb-4">
@@ -615,7 +621,7 @@
 									</div>
 								</div>
 								<div class="col-xl-4 col-lg-4">
-									<div class="card l-bg-blue-dark">
+									<div class="card card-animation l-bg-light">
 										<div class="card-statistic-3 p-4">
 											<div class="card-icon card-icon-large"><img src="click.png" /></div>
 											<div class="mb-4">
@@ -630,7 +636,7 @@
 									</div>
 								</div>
 								<div class="col-xl-4 col-lg-4">
-									<div class="card l-bg-green-dark">
+									<div class="card card-animation l-bg-light">
 										<div class="card-statistic-3 p-4">
 											<div class="card-icon card-icon-large"><img src="click.png" /></div>
 											<div class="mb-4">
@@ -661,7 +667,7 @@
                                         </a>
                                     </h4>
 												<div class="col-6">
-													<div class="card l-bg-orange-dark">
+													<div class="card card-animation l-bg-light">
 														<div class="card-statistic-3 p-4">
 															<div class="card-icon card-icon-large"><img src="dollar.png" /></div>
 															<div class="mb-4">
@@ -676,7 +682,7 @@
 													</div>
 												</div>
 												<div class="col-6">
-													<div class="card l-bg-orange-dark">
+													<div class="card card-animation l-bg-light">
 														<div class="card-statistic-3 p-4">
 															<div class="card-icon card-icon-large"><img src="dollar.png" /></div>
 															<div class="mb-4">
@@ -702,8 +708,8 @@
 										<div class="col-sm-12 p-3">
 											<div class="row">
 												<div class="col-6">
-													<a href="#" class="text-decoration-none">
-													<div class="card l-bg-blue-dark">
+													<a href="#" class="text-decoration-none text-black">
+													<div class="card card-animation l-bg-light">
 														<div class="card-statistic-3 p-4">
 															<div class="card-icon card-icon-large"><img src="star.png" /></div>
 															<div class="mb-4">
@@ -719,9 +725,9 @@
 												</a>
 												</div>
 												<div class="col-6">
-													<a href="#" class="text-decoration-none">
+													<a href="#" class="text-decoration-none text-black">
 
-													<div class="card l-bg-blue-dark">
+													<div class="card card-animation l-bg-light">
 														<div class="card-statistic-3 p-4">
 															<div class="card-icon card-icon-large"><img src="star.png" /></div>
 															<div class="mb-4">
